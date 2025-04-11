@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4</title>
+    <style>
+        #outer{
+            height: 1000px;
+            width: 1000px;
+            border: 2px solid black;
+            border-radius: 100px 100px 100px 100px;
+            
+        }
+        #main{
+            height: 500px;
+            width: 1000px;
+        }
+        
+        #left{
+            float: left;
+            height: 500px;
+            width: 350px;
+            
+        }
+        #left1 {
+            float: left;
+            margin-left: 50px;
+            position: relative;
+            height: 500px;
+            width: 5px;
+            background-color: black;
+        }
+        #right{
+            float: right;
+            height: 500px;
+            width: 550px;
+        }
+        #head{
+            height: 200px;
+            width: 1000px;
+            text-align: center;
+        }
+        
+        
+
+        .dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 50%;
+        }
+        .dot:nth-child(7) { top: 1%; }
+        .dot:nth-child(1) { top: 15%; }
+        .dot:nth-child(2) { top: 30%; }
+        .dot:nth-child(3) { top: 45%; }
+        .dot:nth-child(4) { top: 60%; }
+        .dot:nth-child(5) { top: 75%; }
+        .dot:nth-child(6) { top: 90%; }
+        
+
+        .l1{
+            height: 75px;
+            width: 350px;
+            text-align: right;
+            color: grey;  
+            font-size: 22px;      
+        }
+        .r1{
+            height: 75px;
+            width: 550px;
+            text-align: left;  
+            font-size: 25px;  
+            font-weight: bold;    
+        }
+        #btn{
+            height: 50px;   
+            width: 200px;
+            background-color: black;
+            color: white;
+            border-radius: 10px 10px 10px 10px;
+        }
+        #bt{
+            height: 100px;
+            width: 500px;
+            padding-left: 350px;
+            padding-top: 50px;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="head">
+            <h1>Changelog</h1>
+            <p>Here's everything we have shipped in the past few days</p>
+        </div>
+    <div id="main">
+        <div id="left">
+            
+            <div class="l1"> September 3, 2024</div>
+            <div class="l1"> August 28, 2024</div>
+            <div class="l1"> August 25, 2024</div>
+            <div class="l1"> August 22, 2024</div>
+            <div class="l1"> August 15, 2024</div>
+            <div class="l1"> August 10, 2024</div>
+            <div class="l1"> August 1, 2024</div>
+
+        </div>
+        <div id="left1">
+            <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        <div id="right">
+            <div class="r1">Announcing Project on Frontend Roadmap</div>
+            <div class="r1">Build your learnong habits with learning streaks</div>
+            <div class="r1">Git and GitHub Roadmap</div>
+            <div class="r1">Submit Your project solution and get feedback</div>
+            <div class="r1">Backend Project ideas</div>
+            <div class="r1">Redis Roadmap</div>
+            <div class="r1">Changelog page to hrlp you dtay in the loop</div>
+        </div>
+    </div>
+        <div id="bt">
+            <input type="button" value="Visit complete changelog" id="btn"/>
+
+        </div>
+        
+
+
+
+    </div>
+</body>
+</html>
