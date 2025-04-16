@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=Auto, initial-scale=1.0">
+    <title>Day 7 - Accessble from UI</title>
+    <style>
+        #outer{
+            height: 700px;
+            width: 800px;
+            border: 2px solid black;
+            border-radius: 10%;
+        }
+        #left{
+            height: 600px;
+            width:350px;
+            /* background-color: bisque; */
+            float: left;
+            margin-left: 50px;
+            font-size: 25px;
+            padding: 100px 0px 0px 50px; 
+
+
+        }
+        #right{
+            height: 800px;
+            width: 300px;
+            /* background-color: aquamarine; */
+            float: right;
+            margin-right:45px ;
+        }
+        .box{
+            height: 50px;
+            width: 300px;
+            border-radius: 10px;
+        }
+        #btn{
+            height: 50px;
+            width: 200px;
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+            margin: 50px 0px 0px 50px;
+        }
+        #rtop{
+            height: 250px;
+            width: 300px;
+        }
+        #rbot{
+            height: 300px;
+            width: 230px;
+            margin: 50px 0px 0px 50px;
+            border: 2px solid black;
+            border-radius: 20px;
+            padding-left: 20px;
+        }
+        #cir{
+            height: 150px;
+            width: 300px;
+            padding-left: 70px;
+            padding-top: 50px;
+        }
+        #circle{
+            height: 150px;
+            width: 150px;
+            border: 5px solid black;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+        .circle::after {
+            content: "65%";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+        }
+        #txt2{
+            font-size: 20px;
+            text-align: center;
+        }
+        .err{
+            color: red;
+            font-size: 15px;
+        }
+        .li{
+            color: grey;
+            text-decoration: line-through;
+            /* margin-left: 10px; */
+        }
+        .show-password-btn {
+            position: absolute;
+            right: 10px;
+            top: 48px;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--password-btn-color);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="left">
+            Full name<br>
+            <input type="text" class="box" name="fname" placeholder="What Should we call you?"><br>
+            Email<br>
+            <input type="email" class="box" name="mail" placeholder="gsv@gmail.com"><br>
+            <p class="err">Email is already taken</p><br><br>
+            Enter Password<br>
+            <input type="password" class="box" name="epassword" placeholder="X X X X X X X X" required><br>
+            <button type="button" class="show-password-btn" aria-label="Password is hidden" aria-pressed="false">
+                <svg stroke="#b0b0b0" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.5 11C4.80285 11 2.52952 9.62184 1.09622 7.50001C2.52952 5.37816 4.80285 4 7.5 4C10.1971 4 12.4705 5.37816 13.9038 7.50001C12.4705 9.62183 10.1971 11 7.5 11ZM7.5 3C4.30786 3 1.65639 4.70638 0.0760002 7.23501C-0.0253338 7.39715 -0.0253334 7.60288 0.0760014 7.76501C1.65639 10.2936 4.30786 12 7.5 12C10.6921 12 13.3436 10.2936 14.924 7.76501C15.0253 7.60288 15.0253 7.39715 14.924 7.23501C13.3436 4.70638 10.6921 3 7.5 3ZM7.5 9.5C8.60457 9.5 9.5 8.60457 9.5 7.5C9.5 6.39543 8.60457 5.5 7.5 5.5C6.39543 5.5 5.5 6.39543 5.5 7.5C5.5 8.60457 6.39543 9.5 7.5 9.5Z"
+                    fill="#b0b0b0" fill-rule="evenodd" clip-rule="evenodd"></path>
+                </svg>
+              </button>
+    
+            Confirm Password<br>
+            <input type="password" class="box" name="cpassword" placeholder="X X X X X X X X"><br>
+            <input type="button" id="btn" value="Update Profile">
+
+        </div>
+        <div id="right">
+            <div id="rtop">
+                <div id="cir">
+                    <div id="circle">
+                        65 %
+                    </div>
+                </div>
+                <p id="txt2"><b>PROFILE COMPLETENESS</b></p>
+            </div>
+            <div id="rbot">
+                <p class="li">Create Account</li>
+                <p class="li">Update Roadmap Progress</li>
+                <p class="li">Setup Public profile</li>
+                <p>Complete your first project</p>
+                <p>Invite your Friends</p>
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
