@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9</title>
+</head>
+<style>
+    #outer{
+        height: 250px;
+        width: 500px;
+        border: 2px solid black;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .first{
+        position: relative;
+        display: inline-block;
+        border-bottom: 2px dotted black;
+        margin-left: 2px;
+    }
+    .first .tip {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #faf5f5;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -60px;
+        }
+
+    .first .tip::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+        }
+        .first:hover .tip {
+        visibility: visible;
+    }
+</style>
+<body>
+    <div id="outer">
+        <div class="first">HOME ~ 
+            <span class="tip">Here id Everything i have built</span>
+        </div>
+        <div class="first">Project ~
+            <span class="tip">Here id Everything i have built</span>
+        </div>
+        <div class="first"> Blog
+            <span class="tip">Here id Everything i have built</span>
+        </div>
+        
+
+    </div>
+    
+</body>
+</html>
